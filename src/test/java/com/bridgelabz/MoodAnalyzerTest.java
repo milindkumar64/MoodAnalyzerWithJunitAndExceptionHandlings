@@ -1,31 +1,25 @@
 package com.bridgelabz;
 
-
-
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class MoodAnalyzerTest {
 
 	MoodAnalyzer moodAnalysar;
 
-	@Before
-	public void setup() {
-		moodAnalysar = new MoodAnalyzer();
-	}
-
 	@Test
 	public void testAnalyseMood_1_1() {
 
-		String mood = moodAnalysar.analyseMood("This is a sad mood");
+		MoodAnalyzer moodAnalysar = new MoodAnalyzer("I am in sad mood");
+		String mood = moodAnalysar.analyseMood();
 		Assert.assertEquals("sad", mood);
 	}
 
 	@Test
 	public void testAnalyseMood_1_2() {
 
-		String mood = moodAnalysar.analyseMood("I am in any mood");
+		MoodAnalyzer moodAnalysar = new MoodAnalyzer("I am in Happy mood");
+		String mood = moodAnalysar.analyseMood();
 		Assert.assertEquals("Happy", mood);
 	}
 }
