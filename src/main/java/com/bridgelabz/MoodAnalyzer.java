@@ -1,10 +1,7 @@
-package com.bridgelabz;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+package com.bridgelabz;a
 
 public class MoodAnalyzer {
-	
+
 	public String analyseMood(String message) {
 
 		if (message.contains("sad")) {
